@@ -1,6 +1,20 @@
 package com.cinecom.camera;
 
-import android.Manifest;import android.app.*;import android.content.*;import android.content.pm.PackageManager;import android.graphics.Color;import android.hardware.camera2.*;import android.hardware.camera2.params.*;import android.media.*;import android.os.*;import android.provider.MediaStore;import android.view.*;import android.widget.*;import java.io.*;import java.text.*;import java.util.*;
+import android.Manifest;
+import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.SurfaceTexture;
+import android.hardware.camera2.*;
+import android.hardware.camera2.params.*;
+import android.media.*;
+import android.os.*;
+import android.util.Size;
+import android.view.*;
+import android.widget.*;
+import java.io.*;
+import java.text.*;
+import java.util.*;
 
 public class MainActivity extends Activity {
     TextureView preview; TextView status,mode,values; Button record,profile; CameraDevice camera; CameraCaptureSession session; CameraCharacteristics chars; String cameraId; Recorder recorder; boolean recording=false; long selectedProfile=DynamicRangeProfiles.STANDARD; Handler handler=new Handler(Looper.getMainLooper());
